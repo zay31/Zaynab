@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Run Tortoise Run</title>
+	<style>
+		/*body {*/
+  
+/*}*/
+
+        .container {
+  /*centers in the container*/
+          text-align: center;
+        }
+        *{
+			margin: 0;
+			padding: 0;
+		}
+		.mySlides {
+			display: grid;
+			height: 100%;
+		}
+		.img{
+      display:block;
+			max-width: 500%;
+			max-height: 100vh;
+			margin-left: auto;
+      margin-right: auto;
+    align-content: center;
+		}
+        .btn {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #fcdf03;
+            color: white;
+            font-size: 16px;
+            padding: 12px 35px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        div.circTxt {
+              position: absolute;
+             top: 5%;
+             left: 50%;
+             font-size: 60px;
+      /*font-family: verdana;*/
+      font-weight: bold;
+      color: #DA0A24;
+     /* background: linear-gradient(to right, #DA0A24 25%, #340ADA 50%, #ECFB01 75%, #12AA16 100%);
+     
+      -webkit-background-clip:text;*/
+
+        }
+        div.txt1 {
+          position: absolute;
+          top: 85%;
+          left: 40%;
+          font-size: 60px;
+          color: #0D5C0C;
+        }
+        
+
+	</style>
+</head>
+<body>
+<div class="container">
+  <!--the holders for the text, reuse as desired-->
+  <div class="circTxt" id="test"></div>
+  <div class="txt1" id="text1">I'le Maurice</div>
+  <div class="mySlides">
+ <img class="img" src="nature.png">
+  <button class="btn"  onclick="location.href='background2.html'">Start</button>
+</div>
+</div>
+
+</body>
+<script type="text/javascript">
+	function circularText(txt, radius, classIndex) {
+  txt = txt.split(""),
+    classIndex = document.getElementsByClassName("circTxt")[classIndex];
+
+  var deg = 90 / txt.length,
+    origin = -40;
+
+  txt.forEach((ea) => {
+    ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${ea}</p>`;
+    classIndex.innerHTML += ea;
+    origin += deg;
+
+  });
+}
+
+circularText("Run Tortoise Run", 500, 0);
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+.bg-image {
+  background-image: url("images/image3.jpeg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-image: url("game.webp");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;  
+}
+
+.bg-text.button{
+  top:70%;
+
+}
+</style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+<audio controls autoplay>  
+        <source src="sound/gameover.wav" type="audio/wav">  
+    </audio> 
+
+<div class="bg-text"> 
+<button type="button" onclick="window.location.href = 'Home.html';" style="color:#00802b; margin-top:150px; margin-left:75px; padding:10px;">PLAY AGAIN</button>
+</div>
+
+</body>
+
+</html>

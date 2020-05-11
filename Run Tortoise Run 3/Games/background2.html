@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div id="game">
+    
+	<canvas id="canvas"></canvas>
+	 <div class="navbar">
+	<!--  <label style="font-weight: bold;">Score: </label> -->
+	 <input type="number" id="txtscore"  readonly="readonly" style="border-style: none;font-weight: bold">
+    </div>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js">
+
+	</script>
+	<script type="text/javascript">
+		var initX = 0;
+        var initY = 0;
+
+window.addEventListener('keydown',this.move, true);
+
+function move(e){
+    if(e.keyCode == 87) {//up
+      initY -= 5;
+      $('canvas').css('background-position',initY - "px"); 
+    }
+     if(e.keyCode == 83) {//down
+      initY -= 5;
+      $('canvas').css('background-position',initY + "px");
+    }
+    else if(e.keyCode == 65) {//left
+      initX += 5;
+       $('canvas').css('background-position',initX + "px");
+    }
+    else if(e.keyCode == 68) {//right
+      initX -= 5;
+       $('canvas').css('background-position',initX + "px");
+    }
+};
+			
+      
+    </script>
+    
+    <script type="text/javascript" src="game.js"></script>   
+	
+
+</body>
+</html>
